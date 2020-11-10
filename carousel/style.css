@@ -38,6 +38,7 @@
     display: block; /* removes extra space near images */
   }
   
+  /* removes extra space between list items */
   ul li {
-    display: inline-block; /* removes extra space between list items
+    display: inline-block;
   }
