@@ -6,12 +6,15 @@ for(let li of carousel.querySelectorAll('li')) {
   i++;
 }
 
-/* configuration */
-let width = 130; // image width
-let count = 3; // visible images count
 
 let list = carousel.querySelector('ul');
 let listElems = carousel.querySelectorAll('li');
+
+/* configuration */
+let width = parseInt(getComputedStyle(listElems[0]).width, 10); // image width
+let count = parseInt(
+    getComputedStyle(document.documentElement)
+        .getPropertyValue('--num-images'), 10); // visible images count
 
 let position = 0; // ribbon scroll position
 

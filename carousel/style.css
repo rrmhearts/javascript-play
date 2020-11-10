@@ -1,10 +1,16 @@
+:root {
+  --image-width: 130px;
+  --num-images: 3;
+  --carousel-width: calc(var(--num-images)*var(--image-width));
+}
+
 body {
   padding: 10px;
 }
 
 .carousel {
   position: relative;
-  width: 398px;
+  width: var(--carousel-width);
   padding: 10px 40px;
   border: 1px solid #CCC;
   border-radius: 15px;
@@ -12,7 +18,7 @@ body {
 }
 
 .carousel img {
-  width: 130px;
+  width: var(--image-width);
   height: 130px;
   /* make it block to remove space around images */
   display: block;
@@ -49,17 +55,17 @@ body {
 }
 
 .gallery {
-  width: 390px;
-  overflow: hidden;
+  width: var(--carousel-width); /* exactly 3 images */
+  overflow: hidden; /* hide extra images */
 }
 
 .gallery ul {
-  height: 130px;
-  width: 9999px;
+  height: var(--image-width);
+  width: 9999px; /* auto makes them have to load/re-render*/
   margin: 0;
   padding: 0;
-  list-style: none;
-  transition: margin-left 250ms;
+  list-style: none; /* not doing anything*/
+  transition: margin-left 500ms;
   /* remove white-space between inline-block'ed li */
   /* http://davidwalsh.name/remove-whitespace-inline-block */
   font-size: 0;
