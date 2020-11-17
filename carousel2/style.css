@@ -1,0 +1,36 @@
+div {
+    /* width:900px;
+    overflow: hidden; */
+}
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  display: block;
+  list-style: none;
+}
+button.prev,
+button.next {
+  display: flex;
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #333;
+  border-radius: 80%;
+  width: 54px;
+  height: 54px;
+}
+button.prev {
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+button.next {
+  position: absolute;
+  right: 0;
+  top: 80px;
+}
